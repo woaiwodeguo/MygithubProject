@@ -1,0 +1,72 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    .column {
+      span {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .left {
+        margin-right: 20px;
+        font-size: 25px;
+        vertical-align: middle;
+      }
+      .v-enter {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      .v-leave-to {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      .v-enter-active {
+        transition: 0.6s;
+      }
+      .v-leave-active {
+        transition: 0.1s;
+      }
+    }
+    .user_name {
+      font-size: 0;
+      .vcLine {
+        font-size: 20px;
+        margin: 0 15px 0 15px;
+        vertical-align: middle;
+      }
+      .usNa {
+        font-size: 25px;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+      .usNa:hover {
+        color: steelblue;
+        text-shadow: 1px 1px 1px rgb(70, 149, 180);
+        transition: all 0.4s;
+      }
+      .rightIcon {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        .el-button--text {
+          font-size: 25px;
+          color: black;
+          vertical-align: middle;
+        }
+        .el-button--text:hover{
+          color: #ff6700;
+          transition: 0.3s;
+        }
+      }
+      .cancellation{
+        display: inline-block;
+        margin-left: 18px;
+        .el-button--text{
+          vertical-align: middle;
+        }
+        .el-button--text:hover{
+          color: #ff6700;
+          transition: 0.3s;
+        }
+      }
+    }
+  }

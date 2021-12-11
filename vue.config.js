@@ -1,0 +1,22 @@
+const products = [
+    {id:1,title:'javaScript百炼成仙',price:77,inventory:7999},
+    {id:2,title:'javaScript之王者归来',price:66,inventory:6999},
+    {id:3,title:'javaScript忍者禁书',price:55,inventory:5999},
+]
+module.exports={
+    devServer:{
+        before:app=>{
+            app.get('/api/post',(req,res)=>{
+                res.json({
+                    title:'腹有诗书气自华',
+                    body:'寸金难买寸光阴'
+                })
+            }),
+            app.get('/api/products',(req,res)=>{
+                res.json({
+                    results:products
+                })
+            })
+        }
+    }
+}

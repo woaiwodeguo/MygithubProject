@@ -15,18 +15,22 @@
       </div>
       <div v-if="error" class="error">{{ error }}</div>
       <div v-if="post">
-        <h3>{{ post.title }}</h3>
-        <h4>{{ post.body }}</h4>
+        <h3>{{ post.name }}</h3>
+        <h4>{{ post.age }}</h4>
+        <h4>{{ post.height }}</h4>
+        <h4>{{ post.weight }}</h4>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Axios from 'axios'
 export default {
+  name:'reviewManage',
   data() {
     return {
-      post: "",
+      post: {},
       error: null,
       loading: false,
     };
@@ -41,27 +45,18 @@ export default {
   },
   methods: {
     // 模拟真实数据
-    // async getPostData() {
-    //   try {
-    //     this.loading = true;
-    //     const { data } = await this.$https.get("/api/post");
-    //     this.loading = false;
-    //     this.post = data;
-    //   } catch (error) {
-    //     this.error = error.toString();
-    //   }
-    // },
-
-    // 模拟假数据
-    getPostData() {
-      this.loading = true;
-      setTimeout(() => {
+    async getPostData() {
+      try {
+        this.loading = true;
+        const { data } = await Axios.get("http://localhost:3000");
         this.loading = false;
-        this.post = { title: "感谢", body: "等待" };
-      }, 3000);
-    },
-  },
-};
+        this.post = data;
+      } catch (error) {
+        this.error = error.toString();
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

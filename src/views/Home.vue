@@ -43,12 +43,12 @@ export default {
     back,
   },
   watch: {
-    $route(to, form) {
-      let ret = this.editableTabs.some(item=>item.title===to.name);
-      if(!ret){
-        this.addTab();
-      }
-    },
+    // $route(to, form) {
+    //   let ret = this.editableTabs.some(item=>item.title===to.name);
+    //   if(!ret){
+    //     this.addTab();
+    //   }
+    // },
   },
   data() {
     return {

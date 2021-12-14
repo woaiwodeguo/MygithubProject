@@ -105,7 +105,7 @@ export default {
             // 有账号 判断密码是否正确
             if (this.ruleForm.pwd ===JSON.parse(localStorage.getItem(`${this.ruleForm.name}`)).pwd) {
               // 密码正确
-              this.$router.push({name:'home'})
+              this.$router.push({name:'Home'})
      
             } else {
               alert("登陆密码有误");

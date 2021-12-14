@@ -89,9 +89,6 @@ export default {
         this.list.push({ poem: this.content, poemTime: this.timeNow });
         this.content = "";
         localStorage.setItem("MessageBoard", JSON.stringify(this.list));
-        this.$router.push({
-          name: "return-goods",
-        });
       }
     },
     deleteData(i) {

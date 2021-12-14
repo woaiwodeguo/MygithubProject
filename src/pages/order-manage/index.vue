@@ -1,6 +1,6 @@
 <template>
     <div>
-       <keep-alive>
+       <keep-alive exclude="productManage">
            <router-view></router-view>
        </keep-alive>
     </div>

@@ -101,7 +101,12 @@ export default {
             // 有账号 判断密码是否正确
             if (this.ruleForm.pwd ===JSON.parse(localStorage.getItem(`${this.ruleForm.name}`)).pwd) {
               // 密码正确
-              this.$router.push({name:'Home'})
+              if(!this.$route.query.redirect) return  this.$router.push({ 
+                path: '/home/homepage'
+              })
+              this.$router.push({ 
+                path: this.$route.query.redirect
+              })
      
             } else {
               alert("登陆密码有误");
@@ -133,6 +138,7 @@ export default {
           }else{
             alert("注册成功");
             localStorage.setItem(`${this.ruleForm.name}`,JSON.stringify(this.ruleForm));
+            localStorage.setItem('user','key');
             this.ruleForm.name = this.ruleForm.pwd = "";
           }
         } else {

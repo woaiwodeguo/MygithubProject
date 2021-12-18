@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import NotFound from '../404/NotFound'
 import HomePage from '../pages/home-page/index.vue';
+import musicPlayer from '../pages/music-player';
+import countDown from '../pages/count-down';
+import luckDraw from '../pages/luck-draw'
 
 Vue.use(VueRouter)
 
@@ -123,7 +126,7 @@ const routes = [
       {
         path: 'player',
         name: 'music-player',
-        component: () => import('../pages/music-player'),
+        component:musicPlayer,
         meta:{
           // 加入未登录黑名单
           requiresAuth:true,
@@ -132,7 +135,7 @@ const routes = [
       {
         path: 'countDown',
         name: 'count-down',
-        component: () => import('../pages/count-down'),
+        component: countDown,
         meta:{
           // 加入未登录黑名单
           requiresAuth:true,
@@ -141,7 +144,7 @@ const routes = [
       { 
         path: 'luckDraw',
         name: 'luck-draw',
-        component: () => import('../pages/luck-draw'),
+        component: luckDraw ,
         meta:{
           // 加入未登录黑名单
           requiresAuth:true,
@@ -171,31 +174,33 @@ const router = new VueRouter({
 })
 
 // 全局配置路由守卫
-// router.beforeEach((to,from,next)=>{
-//    if(to.matched.some(record=>record.meta.requiresAuth)){
-//       if(!localStorage.getItem('user')){
-//           next({
-//             path:'/login',
-//             query:{
-//               redirect: to.fullPath
-//             }
-//           })
-//       }else{
-//         next();
-//       }
-//    }
-//    next()
-// })
 router.beforeEach((to,from,next)=>{
-  if(to.name==='music-player'||to.name==='count-down'||to.name==='luck-draw'){
-     if(!localStorage.getItem('user')){
-         next({path:'/login'})
-     }else{
-       next();
-     }
-  }
-  next()
+   if(to.matched.some(record=>record.meta.requiresAuth)){
+      if(!localStorage.getItem('user')){
+          next({
+            path:'/login',
+            query:{
+              redirect: to.fullPath
+            }
+          })
+      }else{
+        next();
+      }
+   }
+   next()
 })
+
+
+// router.beforeEach((to,from,next)=>{
+//   if(to.name==='music-player'||to.name==='count-down'||to.name==='luck-draw'){
+//      if(!localStorage.getItem('user')){
+//          next({path:'/login'})
+//      }else{
+//        next();
+//      }
+//   }
+//   next()
+// })
 
 
 export default router

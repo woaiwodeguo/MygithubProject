@@ -104,7 +104,7 @@ export default {
           localStorage.removeItem('user');
           localStorage.removeItem('bool');
            this.flag=false;
-           this.$router.push({name:'home-page'});
+           this.$router.go(0);
         }).catch(() => {
           this.$message({
             type: 'info',

@@ -8,7 +8,7 @@
 
 const dynamicRoutes = [
     {
-        path: 'homepage',
+        path: '/homepage',
         
         name: 'home-page',
         meta: {
@@ -17,7 +17,7 @@ const dynamicRoutes = [
         }  
     },
     {
-        path: 'order',
+        path: '/order',
         
         name: 'order-manage',
         meta: {
@@ -26,7 +26,7 @@ const dynamicRoutes = [
         },
         children: [
             {
-                path: 'list',
+                path: '/list',
                 name: 'order-list',
              
                 meta: {
@@ -35,7 +35,7 @@ const dynamicRoutes = [
                 }
             },
             {
-                path: 'product',
+                path: '/product',
                 name: 'product-manage',
         
                 meta: {
@@ -44,7 +44,7 @@ const dynamicRoutes = [
                 },
                 children: [
                     {
-                        path: 'list',
+                        path: '/list',
                         name: 'product-list',
                   
                         meta: {
@@ -53,7 +53,7 @@ const dynamicRoutes = [
                         }
                     },
                     {
-                        path: 'review',
+                        path: '/review',
                         name: 'review-manage',
                   
                         meta: {
@@ -64,7 +64,7 @@ const dynamicRoutes = [
                 ]
             },
             {
-                path: 'returnGoods',
+                path: '/returnGoods',
                 name: 'return-goods',
          
                 meta: {
@@ -75,7 +75,7 @@ const dynamicRoutes = [
         ]
     },
     {
-        path: 'goods',
+        path: '/goods',
     
         name: 'goods',
         meta: {
@@ -84,7 +84,7 @@ const dynamicRoutes = [
         },
         children: [
             {
-                path: 'list',
+                path: '/list',
                 name: 'goods-list',
           
                 meta: {
@@ -93,7 +93,7 @@ const dynamicRoutes = [
                 }
             },
             {
-                path: 'classify',
+                path: '/classify',
                 name: 'goods-classify',
          
                 meta: {
@@ -104,7 +104,7 @@ const dynamicRoutes = [
         ]
     },
     {
-        path: 'permission',
+        path: '/permission',
    
         name: 'permission',
         meta: {
@@ -113,7 +113,7 @@ const dynamicRoutes = [
         },
         children: [
             {
-                path: 'user',
+                path: '/user',
                 name: 'user-manage',
             
                 meta: {
@@ -122,7 +122,7 @@ const dynamicRoutes = [
                 }
             },
             {
-                path: 'role',
+                path: '/role',
                 name: 'role-manage',
             
                 meta: {
@@ -131,7 +131,7 @@ const dynamicRoutes = [
                 }
             },
             {
-                path: 'menu',
+                path: '/menu',
                 name: 'menu-manage',
                
                 meta: {
@@ -142,7 +142,7 @@ const dynamicRoutes = [
         ]
     },
     {
-        path: 'player',
+        path: '/player',
         
         name: 'music-player',
         meta: {
@@ -151,7 +151,7 @@ const dynamicRoutes = [
         }  
     },
     {
-        path: 'countDown',
+        path: '/countDown',
         
         name: 'count-down',
         meta: {
@@ -160,7 +160,7 @@ const dynamicRoutes = [
         }  
     },
     {
-        path: 'luckDraw',
+        path: '/luckDraw',
         
         name: 'luck-draw',
         meta: {

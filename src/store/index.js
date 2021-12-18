@@ -5,10 +5,12 @@ Vue.use(Vuex);
 // 挂载购物车和商铺两个模块
 import cart from './modules/cart';
 import products from './modules/products';
+import menu from '@/router/menu.js';
 
 export default new Vuex.Store({
   state: {
-    count:0
+    count:0,
+    menu:menu
   },
   mutations: {
     increment(state){

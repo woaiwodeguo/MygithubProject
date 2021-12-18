@@ -1,0 +1,80 @@
+.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    .el-col-12 {
+      width: 200px;
+      .el-menu {
+        height: 100vh;
+        overflow: auto;
+        .el-submenu {
+          border: 0.5px solid #384453;
+        }
+      }
+    }
+  }
+  .right {
+    min-height: 0px;
+    margin: 67px 20px 0 207px;
+    border: 1px solid #eee;
+    box-shadow: 7px 10px 7px gray;
+    padding: 0 10px;
+    position: relative;
+    .rightView {
+      margin-top: 25px;
+    }
+  }
+  .top {
+    position: fixed;
+    left: 200px;
+    top: 0;
+    right: 0px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 18px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #f5f7fa;
+    z-index: 10;
+    .rightBack {
+      position: absolute;
+      right: 50%;
+      top: 30px;
+      z-index: 15;
+      animation: rightBack 49s linear infinite;
+    }
+    @keyframes rightBack {
+      0% {
+        right: 50%;
+        transform: rotateZ(0deg);
+      }
+      20% {
+        right: 90%;
+        transform: rotateZ(3600deg);
+      }
+      40% {
+        right: 10%;
+        transform: rotateZ(720deg);
+      }
+      60% {
+        right: 90%;
+        transform: rotateZ(3600deg);
+      }
+      70% {
+        right: 10%;
+        transform: rotateZ(720deg);
+      }
+      85% {
+        right: 80%;
+        transform: rotateZ(3600deg);
+      }
+      100% {
+        right: 50%;
+        transform: rotateZ(0deg);
+      }
+    }
+    .rightBack:hover {
+      animation-play-state: paused;
+    }
+  }

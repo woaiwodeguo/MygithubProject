@@ -117,5 +117,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/top.scss'
+  @import '../../assets/css/top.scss';
 </style>

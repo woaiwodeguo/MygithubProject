@@ -89,6 +89,9 @@ export default {
         this.list.push({ poem: this.content, poemTime: this.timeNow });
         this.content = "";
         localStorage.setItem("MessageBoard", JSON.stringify(this.list));
+        setTimeout(()=>{
+          this.$router.go(0);
+        },500)
       }
     },
     deleteData(i) {

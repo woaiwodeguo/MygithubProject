@@ -65,11 +65,7 @@
 </template>
 
 <script>
-import music from "../pages/music-player/index.vue";
 export default {
-  components: {
-    music,
-  },
   data() {
     return {
       flag: false,

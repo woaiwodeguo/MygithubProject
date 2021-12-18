@@ -3,9 +3,9 @@
     <h1>抽奖</h1>
     <div>
       <div class="luckRoute">  
-          <router-link to="/home/luckDraw/luckDrawOne">抽奖One</router-link>
+          <router-link to="/home/luckDraw/luckDrawOne">点我抽奖One</router-link>
         -----
-          <router-link to="/home/luckDraw/luckDrawTwo">抽奖Two</router-link>
+          <router-link to="/home/luckDraw/luckDrawTwo">点我抽奖Two</router-link>
       </div>
       <hr />
       <div class="luckView">

@@ -101,6 +101,7 @@ export default {
             // 有账号 判断密码是否正确
             if (this.ruleForm.pwd ===JSON.parse(localStorage.getItem(`${this.ruleForm.name}`)).pwd) {
               // 密码正确
+              localStorage.setItem('user','key')
               if(!this.$route.query.redirect) return  this.$router.push({ 
                 path: '/home/homepage'
               })

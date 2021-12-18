@@ -5,10 +5,7 @@
       <span class="left">
         <i class="el-icon-s-flag"></i>
       </span>
-      <!-- transition是vue官方提供的动画 -->
-     
-         <span>{{column}}</span>
-    
+      <span>{{column}}</span>
     </div>
 
     <!-- 用户登陆时显示 -->
